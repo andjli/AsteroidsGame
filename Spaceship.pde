@@ -1,34 +1,31 @@
-Spaceship joe = new Spaceship();
-Star[] bob = new Star[200];
-public void setup() 
-{
-  size(500,500);
-  for(int i = 0; i < bob.length; i++){
-    bob[i] = new Star();
-  }
-}
-public void draw() 
-{
-  background(0);
-  joe.show();
-  joe.move();
-  for(int i = 0; i < bob.length; i++){
-    bob[i].show();
-  }
-}
-public void keyPressed(){
-  if(key == 'h'){
-    joe.setXspeed(0);
-    joe.myCenterX = (int)(Math.random()*500);
-    joe.myCenterY = (int)(Math.random()*500);
-  }
-  if(key == 'w'){
-    joe.accelerate(0.25);
-  }
-  if(key == 'a'){
-    joe.turn(10);
-  }
-  if(key == 'd'){
-    joe.turn(-10);
-  }
+class Spaceship extends Floater  
+{   
+    public Spaceship(){
+      corners = 4;
+      xCorners = new int[corners];
+      yCorners = new int[corners];
+      xCorners[0] = -8;
+      yCorners[0] = -8;
+      xCorners[1] = 16;
+      yCorners[1] = 0;
+      xCorners[2] = -8;
+      yCorners[2] = 8;  
+      xCorners[3] = -2;
+      yCorners[3] = 0;
+      myColor = 255;
+      myCenterX = 250;
+      myCenterY = 250;
+    }
+    public void setXspeed(double x){
+      myXspeed = x;
+    }
+    public void setYspeed(double y){
+      myYspeed = y;
+    }
+    public double getXspeed(){
+      return myXspeed;
+    }
+    public double getYspeed(){
+      return myYspeed;
+    }
 }
