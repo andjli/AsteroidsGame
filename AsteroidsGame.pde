@@ -19,6 +19,7 @@ public void draw()
 public void keyPressed(){
   if(key == 'h'){
     joe.setXspeed(0);
+    joe.setYspeed(0);
     joe.myCenterX = (int)(Math.random()*500);
     joe.myCenterY = (int)(Math.random()*500);
   }
