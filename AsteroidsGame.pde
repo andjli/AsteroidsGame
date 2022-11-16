@@ -26,9 +26,9 @@ public void keyPressed(){
     joe.accelerate(0.25);
   }
   if(key == 'a'){
-    joe.turn(10);
+    joe.turn(-10);
   }
   if(key == 'd'){
-    joe.turn(-10);
+    joe.turn(10);
   }
 }
