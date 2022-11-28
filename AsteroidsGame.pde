@@ -20,9 +20,9 @@ public void keyPressed(){
   if(key == 'h'){
     joe.setXspeed(0);
     joe.setYspeed(0);
-    joe.setCenterX((int)(Math.random()*500));
-    joe.setCenterY((int)(Math.random()*500));
-    joe.setPointDirection((int)(Math.random()*360));
+    joe.myCenterX = (int)(Math.random()*500);
+    joe.myCenterY = (int)(Math.random()*500);
+    joe.myPointDirection = (int)(Math.random()*360);
   }
   if(key == 'w'){
     joe.accelerate(0.25);
