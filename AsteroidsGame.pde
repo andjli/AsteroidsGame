@@ -22,6 +22,7 @@ public void keyPressed(){
     joe.setYspeed(0);
     joe.myCenterX = (int)(Math.random()*500);
     joe.myCenterY = (int)(Math.random()*500);
+    //joe.myPointDirection = (int)(Math.random()*
   }
   if(key == 'w'){
     joe.accelerate(0.25);
