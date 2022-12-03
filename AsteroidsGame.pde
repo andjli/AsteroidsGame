@@ -22,7 +22,7 @@ public void draw()
   for(int i = 0; i < asteroid.size(); i++){
     asteroid.get(i).show();
     asteroid.get(i).move();
-    float distance = dist((float)asteroid.get(i).getX(), (float)asteroid.get(i).getY(), (float)joe.getCenterX(),(float)joe.getCenterY());
+    float distance = dist((float)asteroid.get(i).getCenterX(), (float)asteroid.get(i).getCenterY(), (float)joe.getCenterX(),(float)joe.getCenterY());
     if(distance < 20){
       asteroid.remove(i);
     }
