@@ -44,13 +44,13 @@ public void keyPressed(){
   if(key == 'w'){
     joe.accelerate(0.25);
   }
-  if(key == 'a'){
+  else if(key == 'a'){
     joe.turn(-10);
   }
-  if(key == 'd'){
+  else if(key == 'd'){
     joe.turn(10);
   }
-  if(key == ‘r’){
+  else if(key == ‘r’){
     shots.add(new Bullet(joe));
 }
 
