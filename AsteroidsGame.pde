@@ -1,7 +1,7 @@
 Spaceship joe = new Spaceship();
 Star[] bob = new Star[200];
 ArrayList <Asteroid> asteroid = new ArrayList <Asteroid>();
-ArrayList <Bullet> shots = new ArrayList <Bullet>():
+ArrayList <Bullet> shots = new ArrayList <Bullet>();
 public void setup() 
 {
   size(500,500);
