@@ -1,6 +1,7 @@
 Spaceship joe = new Spaceship();
 Star[] bob = new Star[200];
 ArrayList <Asteroid> asteroid = new ArrayList <Asteroid>();
+ArrayList <Bullet> shots = new ArrayList <Bullet>():
 public void setup() 
 {
   size(500,500);
@@ -19,10 +20,14 @@ public void draw()
   for(int i = 0; i < bob.length; i++){
     bob[i].show();
   }
+  for(int i = 0; i<shots.size(); i++){
+    shots.get(i).move();
+    shots.get(i).show();
+  }
   for(int i = 0; i < asteroid.size(); i++){
     asteroid.get(i).show();
     asteroid.get(i).move();
-    float distance = dist((float)asteroid.get(i).getCenterX(), (float)asteroid.get(i).getCenterY(), (float)joe.getCenterX(),(float)joe.getCenterY());
+    float distance = dist((float)asteroid.get(i).getX(), (float)asteroid.get(i).getY(), (float)joe.getCenterX(),(float)joe.getCenterY());
     if(distance < 20){
       asteroid.remove(i);
     }
@@ -45,5 +50,7 @@ public void keyPressed(){
   if(key == 'd'){
     joe.turn(10);
   }
+  if(key == ‘r’){
+    shots.add(new Bullet(joe));
 }
 
