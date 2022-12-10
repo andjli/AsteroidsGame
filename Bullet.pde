@@ -7,9 +7,9 @@ class Bullet extends Floater{
     myPointDirection = joe.getPointDirection();
     accelerate(.6);
   }
-  public double getX(){
+  public double getCenterX(){
     return myCenterX;
-  public double getY(){
+  public double getCenterY(){
     return myCenterY;
   public void show(){
     ellipse((float)myCenterX, (float)myCenterY,10,10);
