@@ -23,7 +23,7 @@ public void draw()
   for(int i = 0; i<shots.size(); i++){
     shots.get(i).move();
     shots.get(i).show();
-    float bulletDist = dist((float)asteroid.get(i).getX(), (float)asteroid.get(i).getY(), (float)shots.getCenterX(),(float)shots.getCenterY());
+    float bulletDist = dist((float)shots.get(i).getX(), (float)shots.get(i).getY(), (float)asteroid.getX(),(float)asteroid.getY());
     if(bulletDist < 20){
       asteroid.remove(i);
     }
