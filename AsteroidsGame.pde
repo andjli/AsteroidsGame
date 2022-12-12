@@ -54,7 +54,9 @@ public void keyPressed(){
   else if(key == 'd'){
     joe.turn(10);
   }
-  else if(key == ‘r’){
+  else if(key == 'r'){
     shots.add(new Bullet(joe));
+  }
 }
+
 
